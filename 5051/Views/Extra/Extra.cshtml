@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Extra";
+}
+
+<h2>Extra Page</h2>
+
+<p>Welcome</p>
+
+<p>Hello</p>
+
+@{
+    int x = 0;
+    for (int i = 0; i < 20; i++)
+    {
+        x++;
+    }
+}
+
+<p>Value of x: @x</p>
+
+<form>
+    First name:<br>
+    <input type="text" name="firstname" value="Mickey">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+
+
+<body>
+    <form>
+        <input type="text" name="name" id="firstField" />
+        <input type="text" name="name" id="secField" onchange="equals()" />
+        <img src="~/Content/image/morningCoffee.jpg" style="display: none; background: #000;" id="image" />
+        <img src="~/Content/image/pulpitrock.jpg" style="display: none; background: #ff0000;" id="image2" />
+
+    </form>
+</body>
+
+<script type="text/javascript">
+    var firstField = document.getElementById('firstField');
+    var secField = document.getElementById('secField');
+    var image = document.getElementById('image');
+    var image2 = document.getElementById('image2');
+
+    function equals() {
+        if (firstField.value == secField.value) {
+            image.style.display = 'block';
+            image2.style.display = 'none';
+        }
+        else {
+            image.style.display = 'none';
+            image2.style.display = 'block';
+        }
+    }
+    firstField.onkeyup = equals;
+    secField.onkeyup = equals;
+
+
+</script>

@@ -15,7 +15,7 @@ namespace _5051
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
+                url: "{controller}/{action}/{id}", // you can add a parameter: /{foo} //better to use post
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
